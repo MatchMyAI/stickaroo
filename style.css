@@ -1,0 +1,60 @@
+/* Stickaroo – schlichte Seiten ohne externe Schriften, Skripte oder Cookies */
+:root {
+  --bg: #faf8ff;
+  --card: #ffffff;
+  --text: #1d1b26;
+  --muted: #5d5970;
+  --accent: #7b3fe4;
+  --accent2: #ff8a3d;
+  --line: #e6e1f2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14121b;
+    --card: #1e1b28;
+    --text: #f1eef8;
+    --muted: #aaa4bd;
+    --accent: #a77bff;
+    --accent2: #ffa266;
+    --line: #2e2a3b;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 32px 18px 64px; }
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+header img { width: 56px; height: 56px; border-radius: 13px; }
+header a { color: inherit; text-decoration: none; font-weight: 700; font-size: 22px; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 4px 0 28px; font-size: 15px; }
+a { color: var(--accent); }
+h1 { font-size: 30px; line-height: 1.2; margin: 8px 0 6px; }
+h2 { font-size: 21px; margin: 34px 0 6px; }
+h3 { font-size: 17px; margin: 22px 0 4px; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); font-size: 15px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 6px 20px 14px;
+  margin: 18px 0;
+}
+.lang { font-size: 15px; margin-bottom: 18px; }
+.hero { text-align: center; padding: 30px 0 10px; }
+.hero img { width: 128px; height: 128px; border-radius: 29px; box-shadow: 0 10px 30px rgba(123, 63, 228, .25); }
+.hero h1 { font-size: 40px; margin-top: 18px; }
+.hero p { font-size: 19px; color: var(--muted); max-width: 520px; margin: 6px auto 0; }
+.buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.button {
+  display: inline-block; padding: 10px 20px; border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff; text-decoration: none; font-weight: 600;
+}
+.button.secondary { background: var(--card); color: var(--accent); border: 1px solid var(--line); }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 8px; }
